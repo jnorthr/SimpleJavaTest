@@ -1,0 +1,34 @@
+// File: build.gradle
+apply plugin: 'java'
+ 
+task(runSimple, dependsOn: 'classes', type: JavaExec) {
+    main = 'com.jnorthr.Simple'
+    classpath = sourceSets.main.runtimeClasspath
+    args 'jnorthr'
+    systemProperty 'simple.message', 'Hello '
+}
+
+
+task(jarbundler, dependsOn: 'classes', type: JavaExec) {
+         main='net.sourceforge.jarbundler.JarBundler'
+	 classpath = sourceSets.main.runtimeClasspath
+    	 args 'jnorthr'
+}
+ 
+task runFinalJar(type: JavaExec) {
+classpath = files('build/libs/jarbundler-2.3.1.jar')
+classpath += sourceSets.main.runtimeClasspath
+//main = full.package.classname
+main='net.sourceforge.jarbundler.JarBundler'
+} //
+
+
+defaultTasks 'runSimple'
+ 
+// javaexec() method also available for direct invocation
+// javaexec {
+//    main = 'com.jnorthr.Simple'
+//    classpath = sourceSets.main.runtimeClasspath
+//    args 'jnorthr'
+//    systemProperty 'simple.message', 'Hello '
+// }
