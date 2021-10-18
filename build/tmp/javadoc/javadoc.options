@@ -1,0 +1,7 @@
+-classpath '/home/jnorthr/Dropbox/Projects/SimpleJavaTest/build/classes/java/main:/home/jnorthr/Dropbox/Projects/SimpleJavaTest/build/resources/main'
+-d '/home/jnorthr/Dropbox/Projects/SimpleJavaTest/build/docs/javadoc'
+-doctitle 'SimpleJavaTest API'
+-notimestamp 
+-quiet 
+-windowtitle 'SimpleJavaTest API'
+'/home/jnorthr/Dropbox/Projects/SimpleJavaTest/src/main/java/com/jnorthr/Simple.java'

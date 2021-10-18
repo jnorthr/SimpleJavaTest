@@ -1,2 +1,0 @@
-com/jnorthr/Simple.java
- com.jnorthr.Simple
